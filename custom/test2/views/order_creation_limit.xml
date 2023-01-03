@@ -5,7 +5,7 @@
         <field name="model">order.creation.limit</field>
         <field name="arch" type="xml">
             <tree>
-                <field name="staff_name" string="Tên"/>
+                <field name="staff_name" string="Tên nhân viên"/>
                 <field name="limit"/>
             </tree>
         </field>
@@ -27,14 +27,14 @@
     </record>
 
     <record id="order_creation_limit_action" model="ir.actions.act_window">
-        <field name="name">Order Creation Limit</field>
+        <field name="name">Hạn mức tạo đơn hàng</field>
         <field name="res_model">order.creation.limit</field>
         <field name="view_mode">tree,form</field>
     </record>
 
     <menuitem id="order_creation_menu_root" parent="purchase.menu_purchase_root"
-              name="Order Creation"/>
+              name="Hạn mức tạo đơn hàng"/>
 
     <menuitem id="order_creation_limit_menu" parent="order_creation_menu_root"
-              name="Order Creation Limit" action="order_creation_limit_action"/>
+              name="Hạn mức tạo đơn hàng" action="order_creation_limit_action"/>
 </odoo>

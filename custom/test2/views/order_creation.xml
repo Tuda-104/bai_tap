@@ -31,6 +31,6 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="order_creation_menu" name="Order Creation" parent="purchase.menu_purchase_root"
-              action="order_creation_action"/>
+<!--    <menuitem id="order_creation_menu" name="Order Creation" parent="purchase.menu_purchase_root"-->
+<!--              action="order_creation_action"/>-->
 </odoo>

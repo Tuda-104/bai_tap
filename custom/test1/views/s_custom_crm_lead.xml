@@ -11,7 +11,7 @@
             <xpath expr="//field[@name='tag_ids']" position="after">
                 <field name="minimum_revenue" widget="monetary" attrs="{'readonly':[('all_quotation', '!=', 0)]}"/>
                 <field name="check_priority" invisible="1"/>
-                <field name="all_quotation" invisible="0" readonly="0"/>
+                <field name="all_quotation" invisible="1" readonly="0"/>
                 <field name="create_month" invisible="1"/>
             </xpath>
 

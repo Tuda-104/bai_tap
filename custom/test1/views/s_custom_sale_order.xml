@@ -9,7 +9,7 @@
                 <field name="plan_sale_order"/>
             </xpath>
             <xpath expr="//button[@name='action_confirm']" position="after">
-                <button name="%(test1.plan_sale_order_action)d" string="Tạo kế hoạch bán hàng"
+                <button name="%(test1.plan_sale_order_action)d" string="Tạo phương án kinh doanh"
                         type="action"/>
             </xpath>
         </field>

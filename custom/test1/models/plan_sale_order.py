@@ -26,7 +26,7 @@ class PlanSaleOrder(models.Model):
         if self.state == 'new':
             if self.order_line.approver:
                 self.state = 'send'
-                noti_send = f'({self.create_uid.name}) {fields.Datetime.now()} -> kế hoạch kinh doanh mới đã được gửi.'
+                noti_send = f'({self.create_uid.name}) {fields.Datetime.now()} -> phương án kinh doanh mới đã được gửi.'
                 self.message_post(subject='Gửi để duyệt', body=noti_send, mesage_type='notification',
                                   partner_ids=self.order_line.approver.ids)
             else:
@@ -37,15 +37,15 @@ class PlanSaleOrder(models.Model):
     def btn_approve(self):
         if self.check_confirm == 'yes':
             self.state = 'approve'
-            noti_approve = f'({self.create_uid.name}) {fields.Datetime.now()} -> kế hoạch kinh doanh mới đã được duyệt.'
+            noti_approve = f'({self.create_uid.name}) {fields.Datetime.now()} -> phương án kinh doanh mới đã được duyệt.'
             self.message_post(subject='Đã duyệt', body=noti_approve)
         else:
-            raise UserError('Tất cả người phê duyệt chưa đồng ý duyệt kế hoạch này.')
+            raise UserError('Tất cả người phê duyệt chưa đồng ý duyệt phương án này.')
 
     def btn_refuse(self):
         if self.check_confirm == 'no':
             self.state = 'refuse'
-            noti_refuse = f'({self.create_uid.name}) {fields.Datetime.now()} -> Kế hoạch kinh doanh mới đã bị từ chối, yêu cầu tạo bản khác và gửi duyệt lại.'
+            noti_refuse = f'({self.create_uid.name}) {fields.Datetime.now()} -> phương án kinh doanh mới đã bị từ chối, yêu cầu tạo bản khác và gửi duyệt lại.'
             self.message_post(subject='Từ chối duyệt', body=noti_refuse)
         else:
-            raise UserError('Tất cả người phê duyệt chưa từ chối duyệt kế hoạch này.')
+            raise UserError('Tất cả người phê duyệt chưa từ chối duyệt phương án này.')

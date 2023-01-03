@@ -19,7 +19,7 @@
                     <div class="oe_title">
                         <label for="name" class="oe_edit_only"/>
                         <h1>
-                            <field name="name" placeholder="Tên kế hoạch kinh doanh"
+                            <field name="name" placeholder="Tên phương án kinh doanh"
                                    attrs="{'readonly': [('state', 'in', ('send','approve','refuse'))]}"/>
                         </h1>
                     </div>
@@ -65,11 +65,11 @@
     </record>
     <!--action-->
     <record id="plan_sale_order_action" model="ir.actions.act_window">
-        <field name="name">Plan Sale Order</field>
+        <field name="name">Lập phương án kinh doanh</field>
         <field name="res_model">plan.sale.order</field>
         <field name="view_mode">tree,form</field>
     </record>
     <!--menu item-->
-    <menuitem name="Plan Sale Order" id="plan_sale_order_menu" parent="sale.sale_menu_root"
+    <menuitem name="Lập phương án kinh doanh" id="plan_sale_order_menu" parent="sale.sale_menu_root"
               action="plan_sale_order_action"/>
 </odoo>

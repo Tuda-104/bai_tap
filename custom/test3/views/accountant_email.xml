@@ -17,7 +17,7 @@
             <field name="arch" type="xml">
                 <form>
                     <header>
-                        <button name="send_email" string="Send by email" type="object"/>
+                        <button name="send_email" string="Gửi email" type="object"/>
                     </header>
                     <sheet>
                         <group>
@@ -29,7 +29,7 @@
         </record>
 
         <record model="ir.actions.act_window" id="accountant_email_action">
-            <field name="name">Accountant Email</field>
+            <field name="name">Email kế toán </field>
             <field name="res_model">accountant.email</field>
             <field name="view_mode">tree,form</field>
         </record>
