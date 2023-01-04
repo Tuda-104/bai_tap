@@ -5,7 +5,7 @@
         <field name="model">crm.team</field>
         <field name="inherit_id" ref="sales_team.crm_team_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//form//sheet//notebook//page[@name='members_users']" position="before">
+            <xpath expr="//page[@name='members_users']" position="before">
                 <page name="month_sales_team" string="Chỉ tiêu doanh số theo tháng (trước VAT)" groups="test1.group_staff_leader">
                     <group>
                         <field name="jan" widget="monetary"/>
@@ -24,9 +24,5 @@
                 </page>
             </xpath>
         </field>
-    </record>
-
-    <record id="sales_team_menu_config" model="ir.ui.menu">
-        <field name="name">Configuration</field>
     </record>
 </odoo>

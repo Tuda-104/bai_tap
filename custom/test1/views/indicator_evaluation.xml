@@ -35,8 +35,5 @@
             <field name="res_model">indicator.evaluation</field>
             <field name="view_mode">tree,form</field>
         </record>
-
-<!--        <menuitem name="Indicator Evaluation" id="indicator_evaluation_menu" parent="crm.crm_menu_root"-->
-<!--                  action="indicator_evaluation_action"/>-->
     </data>
 </odoo>
